@@ -27,9 +27,21 @@ class AddProject extends Component {
         });
     }
 
-    addProject() {
+    addProject(item) {
         console.log("Clicked Save Project button");
-        this.props.addProject(this.state);
+
+        const proiecte = this.state;
+        var sirAct = proiecte;
+        sirAct.push({
+            id: sirAct.length ? sirAct[sirAct.length - 1].id + 1 : 1,
+            titlu: item.titlu,
+            technologie: item.technologie,
+            descriere: item.descriere
+        });
+        console.log("sirAct", sirAct);
+        this.setState({ proiecte: sirAct });
+
+        this.addProject(this.state);
         this.setState(this.initialState); // Golesc formularul
     }
 

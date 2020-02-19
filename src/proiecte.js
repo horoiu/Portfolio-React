@@ -1,16 +1,63 @@
 import React, { Component } from "react";
 import ProiectCard from "./proiectCard";
-import LProiecte from "./proiecte.json";
+// import LProiecte from "./proiecte.json";
 
 // console.log("proiecte.js: LProiecte = ", LProiecte);
 class Proiecte extends Component {
     constructor(props) {
         super(props);
-        this.state = { proiecte: LProiecte };
+
+        // this.state = { proiecte: LProiecte };
+        this.state = {
+            proiecte: [
+                {
+                    id: 1,
+                    titlu: "TITLU PROIECT-1",
+                    tehnologie: "WordPress",
+                    descriere:
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                },
+                {
+                    id: 2,
+                    titlu: "TITLU PROIECT-2",
+                    tehnologie: "HTML & CSS",
+                    descriere:
+                        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."
+                },
+                {
+                    id: 3,
+                    titlu: "TITLU PROIECT-3",
+                    tehnologie: "JavaScript",
+                    descriere:
+                        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+                },
+                {
+                    id: 4,
+                    titlu: "TITLU PROIECT-4",
+                    tehnologie: "MySQL- & APEX",
+                    descriere:
+                        "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae."
+                },
+                {
+                    id: 5,
+                    titlu: "TITLU PROIECT-5",
+                    tehnologie: "React-JS",
+                    descriere:
+                        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+                },
+                {
+                    id: 6,
+                    titlu: "TITLU PROIECT-6",
+                    tehnologie: "C-Sharp",
+                    descriere:
+                        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
+                }
+            ]
+        };
 
         this.deleteProject = this.deleteProject.bind(this);
-        this.addProject = this.addProject.bind(this);
     }
+
     deleteProject(ev) {
         const idProiect = parseInt(ev.target.id);
         const { proiecte } = this.state;
@@ -21,34 +68,22 @@ class Proiecte extends Component {
         this.setState({
             proiecte: sirNou
         });
+
         localStorage.setItem("proiecte", JSON.stringify(sirNou));
     }
 
-    addProject(act) {
-        console.log("addProject from proiecte.js ");
-        const { proiecte } = this.state;
-        var sirAct = proiecte;
-        sirAct.push({
-            id: sirAct.length ? sirAct[sirAct.length - 1].id + 1 : 1,
-            titlu: act.titlu,
-            technologie: act.technologie,
-            descriere: act.descriere
-        });
-        console.log("sirAct", sirAct);
-        this.setState({ proiecte: sirAct });
+    //Working on LocalStorage
+    componentDidMount() {
+        if (localStorage.getItem("proiecte")) {
+            console.log("local state IF");
+            this.setState({
+                proiecte: JSON.parse(localStorage.getItem("proiecte"))
+            });
+        } else {
+            console.log("local state ELSE");
+            // this.setState({ proiecte: [] });
+        }
     }
-
-    // componentDidMount() {
-    //     if (localStorage.getItem("proiecte")) {
-    //         console.log("local state IF");
-    //         this.setState({
-    //             proiecte: JSON.parse(localStorage.getItem("proiecte"))
-    //         });
-    //     } else {
-    //         console.log("local state ELSE");
-    //         // this.setState({ proiecte: [] });
-    //     }
-    // }
 
     render() {
         // console.log("proiecte.js this.state:", this.state);
