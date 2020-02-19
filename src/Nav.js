@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class Nav extends Component {
     render() {
         const stil = { fontWeight: "bold", color: "red" };
-        const stilH3 = { fontSize: "20px", marginTop: "30px" };
+        const stilH5 = { fontWeight: "bold", marginTop: "30px" };
+
         return (
             <div>
-                <h3 style={stilH3}>Meniul aplicației</h3>
+                <h5 style={stilH5}>Menu</h5>
                 <ul className="nav flex-column">
                     <li className="nav-item">
                         <NavLink
@@ -15,25 +17,16 @@ class Nav extends Component {
                             className="nav-link"
                             activeStyle={stil}
                         >
-                            Home
+                            Proiecte:
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink
-                            to="/noutati"
+                            to="/adaugare"
                             className="nav-link"
                             activeStyle={stil}
                         >
-                            Noutăți
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink
-                            to="/contact"
-                            className="nav-link"
-                            activeStyle={stil}
-                        >
-                            Contact
+                            Adaugare
                         </NavLink>
                     </li>
                     <li className="nav-item">
@@ -43,6 +36,15 @@ class Nav extends Component {
                             activeStyle={stil}
                         >
                             Despre
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
+                            to="/contact"
+                            className="nav-link"
+                            activeStyle={stil}
+                        >
+                            Contact
                         </NavLink>
                     </li>
                 </ul>

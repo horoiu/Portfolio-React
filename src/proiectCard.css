@@ -1,0 +1,14 @@
+.proiectCard {
+    background-color: #57c3fa;
+    border: 2px solid blue;
+    border-radius: 6px;
+    width: 15rem;
+    height: 18rem;
+    margin: 0.5rem;
+}
+
+.proiectCard:hover {
+    box-shadow: 10px 10px 5px grey;
+    transform: translate(-2px, -2px);
+    transition: 4sec;
+}

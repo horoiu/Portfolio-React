@@ -3,10 +3,37 @@ class Despre extends Component {
     render() {
         return (
             <>
-                <h3 className="mt-5">Despre</h3>
-                <p>
+                <h2 className="mt-5 text-center font-weight-bold">Despre</h2>
+                <p className="text-center">
                     Pagina <em>Despre</em>.
                 </p>
+                <div className="d-flex justify-content-around">
+                    <ul className="d-flex justify-content-around">
+                        <li className="mr-5">
+                            Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta
+                            sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit aspernatur aut odit aut fugit,
+                        </li>
+                        <li className="mr-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation
+                        </li>
+                        <li className="mr-5">
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga.
+                        </li>
+                    </ul>
+                </div>
             </>
         );
     }
