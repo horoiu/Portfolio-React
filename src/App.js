@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Antet from "./antet";
 import Nav from "./Nav";
 import Proiecte from "./proiecte";
-import Adaugare from "./adaugare";
-import Despre from "./despre";
+import AddProject from "./addProject";
+import About from "./about";
 import Contact from "./contact";
 import Notfound from "./notFound";
 import Footer from "./footer";
@@ -27,8 +27,8 @@ class App extends Component {
                     <div className="col-9">
                         <Switch>
                             <Route exact path="/" component={Proiecte} />
-                            <Route path="/adaugare" component={Adaugare} />
-                            <Route path="/despre" component={Despre} />
+                            <Route path="/addProject" component={AddProject} />
+                            <Route path="/about" component={About} />
                             <Route path="/contact" component={Contact} />
                             <Route component={Notfound} />
                         </Switch>

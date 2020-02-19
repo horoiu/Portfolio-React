@@ -4,7 +4,7 @@ import "./proiectCard.css";
 
 class ProiectCard extends Component {
     render() {
-        console.log("proiectCard this.props", this.props);
+        // console.log("proiectCard this.props", this.props);
         return (
             <>
                 <div className="proiectCard d-inline-block btn">
@@ -15,7 +15,7 @@ class ProiectCard extends Component {
                         color="indigo"
                         className="float-right"
                         id={this.props.id}
-                        onClick={this.props.stergeProiect}
+                        onClick={this.props.deleteProject}
                     >
                         Delete
                     </MDBBtn>

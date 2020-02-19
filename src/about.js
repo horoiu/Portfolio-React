@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-class Despre extends Component {
+class About extends Component {
     render() {
         return (
             <>
-                <h2 className="mt-5 text-center font-weight-bold">Despre</h2>
-                <p className="text-center">
-                    Pagina <em>Despre</em>.
-                </p>
+                <h2 className="mt-5 text-center font-weight-bold">
+                    <em>About</em> page
+                </h2>
                 <div className="d-flex justify-content-around">
                     <ul className="d-flex justify-content-around">
                         <li className="mr-5">
@@ -39,4 +38,4 @@ class Despre extends Component {
     }
 }
 
-export default Despre;
+export default About;

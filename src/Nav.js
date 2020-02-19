@@ -17,25 +17,25 @@ class Nav extends Component {
                             className="nav-link"
                             activeStyle={stil}
                         >
-                            Proiecte:
+                            Projects:
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink
-                            to="/adaugare"
+                            to="/addProject"
                             className="nav-link"
                             activeStyle={stil}
                         >
-                            Adaugare
+                            Add project
                         </NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink
-                            to="/despre"
+                            to="/about"
                             className="nav-link"
                             activeStyle={stil}
                         >
-                            Despre
+                            About
                         </NavLink>
                     </li>
                     <li className="nav-item">

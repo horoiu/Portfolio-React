@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import ProiectCard from "./proiectCard";
 import LProiecte from "./proiecte.json";
 
-console.log("proiecte.js: LProiecte = ", LProiecte);
+// console.log("proiecte.js: LProiecte = ", LProiecte);
 class Proiecte extends Component {
     constructor(props) {
         super(props);
         this.state = { proiecte: LProiecte };
 
-        this.stergeProiect = this.stergeProiect.bind(this);
+        this.deleteProject = this.deleteProject.bind(this);
+        this.addProject = this.addProject.bind(this);
     }
-    stergeProiect(ev) {
+    deleteProject(ev) {
         const idProiect = parseInt(ev.target.id);
         const { proiecte } = this.state;
         const sirNou = proiecte.filter(item => {
@@ -23,8 +24,8 @@ class Proiecte extends Component {
         localStorage.setItem("proiecte", JSON.stringify(sirNou));
     }
 
-    adaugProiect(act) {
-        console.log("Adauga");
+    addProject(act) {
+        console.log("addProject from proiecte.js ");
         const { proiecte } = this.state;
         var sirAct = proiecte;
         sirAct.push({
@@ -58,14 +59,16 @@ class Proiecte extends Component {
                 titlu={item.titlu}
                 tehnologie={item.tehnologie}
                 descriere={item.descriere}
-                stergeProiect={this.stergeProiect}
+                deleteProject={this.deleteProject}
             />
         ));
 
         // console.log("proiecte.js lista:", lista);
         return (
             <>
-                <h3 className="mt-2 text-center font-weight-bold">Proiecte</h3>
+                <h3 className="mt-2 text-center font-weight-bold">
+                    Project's list
+                </h3>
                 <div className="container">{lista}</div>
             </>
         );
