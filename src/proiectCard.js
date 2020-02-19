@@ -4,7 +4,7 @@ import "./proiectCard.css";
 
 class ProiectCard extends Component {
     render() {
-        // console.log("proiectCard this.props", this.props);
+        console.log("proiectCard this.props", this.props);
         return (
             <>
                 <div className="proiectCard d-inline-block btn">

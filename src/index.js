@@ -7,8 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "./index.css";
 
-// import ProiectCard from "./proiectCard";
-
 import App from "./App";
 
 ReactDOM.render(

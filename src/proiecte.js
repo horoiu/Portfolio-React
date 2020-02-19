@@ -37,17 +37,17 @@ class Proiecte extends Component {
         this.setState({ proiecte: sirAct });
     }
 
-    componentDidMount() {
-        if (localStorage.getItem("proiecte")) {
-            console.log("local state IF");
-            this.setState({
-                proiecte: JSON.parse(localStorage.getItem("proiecte"))
-            });
-        } else {
-            console.log("local state ELSE");
-            // this.setState({ proiecte: [] });
-        }
-    }
+    // componentDidMount() {
+    //     if (localStorage.getItem("proiecte")) {
+    //         console.log("local state IF");
+    //         this.setState({
+    //             proiecte: JSON.parse(localStorage.getItem("proiecte"))
+    //         });
+    //     } else {
+    //         console.log("local state ELSE");
+    //         // this.setState({ proiecte: [] });
+    //     }
+    // }
 
     render() {
         // console.log("proiecte.js this.state:", this.state);

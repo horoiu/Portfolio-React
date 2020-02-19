@@ -12,7 +12,7 @@ class Contact extends Component {
                         <div className="ml-5 form-inline">
                             <label
                                 className="font-weight-bold"
-                                for="formGroupExampleInput"
+                                // for="formGroupExampleInput"
                             >
                                 Hi, my name is:
                             </label>
@@ -26,13 +26,13 @@ class Contact extends Component {
                         <div className="ml-5 mt-4 form-inline">
                             <label
                                 className="font-weight-bold"
-                                for="inputEmail4"
+                                // for="inputEmail4"
                             >
                                 My Email adress is:
                             </label>
                             <input
                                 type="email"
-                                class="ml-2 form-control"
+                                className="ml-2 form-control"
                                 id="inputEmail4"
                                 placeholder="your email"
                             />
@@ -40,7 +40,7 @@ class Contact extends Component {
                         <div className="ml-5 mt-4 form-inline">
                             <label
                                 className="font-weight-bold"
-                                for="formGroupExampleInput"
+                                // for="formGroupExampleInput"
                             >
                                 I'd like to talk about:
                             </label>
@@ -53,7 +53,7 @@ class Contact extends Component {
                         <div className="ml-5 mt-4 form-inline">
                             <label
                                 className="ml-2 font-weight-bold"
-                                for="formGroupExampleInput"
+                                // for="formGroupExampleInput"
                             >
                                 My budget is:
                             </label>
@@ -67,12 +67,12 @@ class Contact extends Component {
                         <div className="ml-5 mt-4 form-inline">
                             <label
                                 className="ml-2 font-weight-bold"
-                                for="formGroupExampleInput"
+                                // for="formGroupExampleInput"
                             >
                                 Here's a bit about my project:
                             </label>
                             <textarea
-                                class="ml-2 w-40 form-control"
+                                className="ml-2 w-40 form-control"
                                 id="exampleFormControlTextarea1"
                                 rows="2"
                             ></textarea>
