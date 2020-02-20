@@ -15,3 +15,9 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById("root")
 );
+
+// Project-wise :
+// - file names should be consistent (CamelCase / lowercase)
+// - it's better to use english names
+// - it's better to structure the project in folders https://reactjs.org/docs/faq-structure.html
+// as suggeste by Roland, decide what works better for you

@@ -5,6 +5,11 @@ import "./proiectCard.css";
 class ProiectCard extends Component {
     render() {
         // console.log("proiectCard this.props", this.props);
+
+        // We can destructurate the props here to make the JSX cleaner
+        // e.g.  const { titlu, tehnologie, descriere, id, deleteProject } = this.props;
+        // and the use them without the this.props '<h5>{titlu}</h5>'
+
         return (
             <>
                 <div className="proiectCard d-inline-block btn">

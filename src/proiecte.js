@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProiectCard from "./proiectCard";
-// import LProiecte from "./proiecte.json";
+// import LProiecte from "./proiecte.json"; //This is ok, but the file should be JS
+
 
 // console.log("proiecte.js: LProiecte = ", LProiecte);
 class Proiecte extends Component {
@@ -59,8 +60,14 @@ class Proiecte extends Component {
     }
 
     deleteProject(ev) {
+        
         const idProiect = parseInt(ev.target.id);
+        // parseInt can return NaN, parseInt('a'), would be safer to check and return here to avoid unexpected results from filter
+
         const { proiecte } = this.state;
+        
+        // If it is a short one liner, we can use the shorthand syntax because its easier to read. It's a matter of preference anyway.
+        // e.g. const sirNou = proiecte.filter(item => item.id !== idProiect);
         const sirNou = proiecte.filter(item => {
             return item.id !== idProiect;
         });
@@ -69,6 +76,7 @@ class Proiecte extends Component {
             proiecte: sirNou
         });
 
+        // We should decouple by extracting this in a separate file (e.g. a service)
         localStorage.setItem("proiecte", JSON.stringify(sirNou));
     }
 
