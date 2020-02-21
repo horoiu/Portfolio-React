@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header.jsx";
 import Nav from "../Nav/Nav";
-import Projects from "../Projects/Projects";
-import AddProject from "../../addProject";
-import About from "../About/About.jsx";
-import Contact from "../Contact/Contact";
-import NotFound from "../NotFound/NotFound";
 import Footer from "../Footer/Footer";
-import { Route, Switch } from "react-router-dom";
+import Projects from "../Projects/Projects";
+import AddProject from "../../pages/AddProject/addProject";
+import About from "../../pages/About/About.jsx";
+import Contact from "../../pages/Contact/Contact";
+import NotFound from "../../pages/NotFound/NotFound";
 import "./App.css";
 
 class App extends Component {
