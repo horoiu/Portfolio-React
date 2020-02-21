@@ -6,9 +6,9 @@ class NotFound extends Component {
     render() {
         return (
             <>
-                <h3 className="mt-5">Pagină inexistentă</h3>
+                <h3 className="mt-5">Page Not Found</h3>
                 <p>
-                    <em>Pagina inexistentă</em>.
+                    <em>Page not found.</em>.
                 </p>
             </>
         );

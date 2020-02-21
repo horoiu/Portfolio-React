@@ -18,3 +18,8 @@ form button {
 li {
     list-style-type: none;
 }
+
+.style {
+    background-color: #ddd;
+    height: 60vh;
+}

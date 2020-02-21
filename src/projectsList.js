@@ -1,4 +1,7 @@
-let projectsList = [
+// this file should be .js and export default the array with your data
+// https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export#Syntax
+
+const projectsList = [
     {
         id: 1,
         title: "TITLU PROIECT-1",

@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import ProjectCard from "./projectCard";
-import ProjectsList from "./projectsList";
+import projectsList from "./projectsList.js"; //This is ok, but the file should be JS
 
 // console.log("projects.js: ProjectsList = ", ProjectsList);
 class Projects extends Component {
     constructor(props) {
         super(props);
-        console.log("project.js Projects constructor");
+        console.log("Projects.js: constructor()");
 
-        this.state = { projectsList: ProjectsList };
-
+        this.state = { projectsList: projectsList };
         // this.state = {
         //     projectsList: [
         //         {
@@ -62,21 +61,26 @@ class Projects extends Component {
 
     deleteProject(ev) {
         const idProject = parseInt(ev.target.id);
+        // parseInt can return NaN, parseInt('a'), would be safer to check and return here to avoid unexpected results from filter
+
         const { projectsList } = this.state;
+
+        // If it is a short one liner, we can use the shorthand syntax because its easier to read. It's a matter of preference anyway.
+        // e.g. const sirNou = proiecte.filter(item => item.id !== idProiect);
         const newList = projectsList.filter(item => item.id !== idProject);
 
         this.setState({ projectsList: newList });
 
+        // We should decouple by extracting this in a separate file (e.g. a service)
         localStorage.setItem("projectsList", JSON.stringify(newList));
     }
 
-    // // Working on LocalStorage
+    //Working on LocalStorage
     componentDidMount() {
-        console.log("ComponentDidMount()");
+        console.log("Projects.js: ComponentDidMount()");
 
         // const projectsList = JSON.parse(localStorage.getItem("projectsList"));
         // localStorage.setItem("projectsList", JSON.stringify(newList));
-
         // if (localStorage.getItem("projectsList") !== []) {
         //     console.log("local state IF", projectsList);
         //     this.setState({
@@ -94,7 +98,8 @@ class Projects extends Component {
     }
 
     render() {
-        console.log("projects.js render() this.state:", this.state);
+        console.log("Projects.js: render()");
+        // console.log("projects.js this.state:", this.state);
 
         let list = this.state.projectsList.map(item => (
             <ProjectCard
@@ -107,6 +112,7 @@ class Projects extends Component {
             />
         ));
 
+        // console.log("projects.js list:", list);
         return (
             <>
                 <h3 className="mt-2 text-center font-weight-bold">
