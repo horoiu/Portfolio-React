@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProjectCard from "./projectCard";
+import ProjectCard from "../ProjectCard/projectCard";
 import projectsList from "./projectsList.js"; //This is ok, but the file should be JS
 
 // console.log("projects.js: ProjectsList = ", ProjectsList);

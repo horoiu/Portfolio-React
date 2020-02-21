@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Antet from "./Antet.js";
 import Nav from "./components/Nav/Nav";
-import Projects from "./Projects";
+import Projects from "./components/Projects/Projects";
 import AddProject from "./addProject";
 import About from "./components/About/About.jsx";
 // import About from "./components/About/About.jsx/index.js.js";
