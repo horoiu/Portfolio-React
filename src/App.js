@@ -12,6 +12,9 @@ import "./App.css";
 
 class App extends Component {
     render() {
+
+        // We can move the style outside the class (even in another file if necessary), since has no computed parts and it's
+        // all hardcoded, this way we prevent the re-declaration in on every render
         const stil = {
             backgroundColor: "#ddd",
             height: "60vh"
