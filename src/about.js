@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+//The file should be renamed to JSX extension since it contains React JSX syntax
+
 class About extends Component {
     render() {
         return (

@@ -4,6 +4,8 @@ import { MDBBtn, MDBInput } from "mdbreact";
 class AddProject extends Component {
     constructor(props) {
         super(props);
+
+        //Since this initialState is used as default and never changed, it could be extracted outside the class in a const.
         this.initialState = {
             id: 0,
             title: "",
