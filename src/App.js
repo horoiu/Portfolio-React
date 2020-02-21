@@ -5,7 +5,7 @@ import Projects from "./Projects";
 import AddProject from "./addProject";
 import About from "./about.jsx";
 import Contact from "./contact";
-import Notfound from "./notFound";
+import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -29,7 +29,7 @@ class App extends Component {
                             <Route path="/addProject" component={AddProject} />
                             <Route path="/about" component={About} />
                             <Route path="/contact" component={Contact} />
-                            <Route component={Notfound} />
+                            <Route component={NotFound} />
                         </Switch>
                     </div>
                 </div>

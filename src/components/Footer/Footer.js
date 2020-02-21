@@ -4,10 +4,8 @@ import "./footer.css";
 const year = new Date().getFullYear();
 function Footer() {
     return (
-        <div className="text-center">
-            <h5 className="footer">
-                ©{year} DevSpace.ro. All rights reserved.
-            </h5>
+        <div className="text-center footer">
+            <h5>©{year} DevSpace.ro. All rights reserved.</h5>
         </div>
     );
 }
