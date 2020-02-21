@@ -6,7 +6,7 @@ import AddProject from "./addProject";
 import About from "./about.jsx";
 import Contact from "./contact";
 import Notfound from "./notFound";
-import Footer from "./footer";
+import Footer from "./components/Footer/Footer";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
