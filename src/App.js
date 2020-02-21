@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Antet from "./Antet.js";
-import Nav from "./Nav";
+import Nav from "./components/Nav/Nav";
 import Projects from "./Projects";
 import AddProject from "./addProject";
 import About from "./components/About/About.jsx";

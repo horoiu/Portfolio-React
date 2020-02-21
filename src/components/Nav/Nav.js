@@ -1,21 +1,19 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import "./nav.css";
 
 class Nav extends Component {
     render() {
-        const stil = { fontWeight: "bold", color: "red" };
-        const stilH5 = { fontWeight: "bold", marginTop: "30px" };
-
         return (
             <div>
-                <h5 style={stilH5}>Menu</h5>
+                <h5 className="styleH5">Menu</h5>
                 <ul className="nav flex-column">
                     <li className="nav-item">
                         <NavLink
                             exact
                             to="/"
                             className="nav-link"
-                            activeStyle={stil}
+                            activeClassName="active"
                         >
                             Projects:
                         </NavLink>
@@ -24,7 +22,7 @@ class Nav extends Component {
                         <NavLink
                             to="/addProject"
                             className="nav-link"
-                            activeStyle={stil}
+                            activeClassName="active"
                         >
                             Add project
                         </NavLink>
@@ -33,7 +31,7 @@ class Nav extends Component {
                         <NavLink
                             to="/about"
                             className="nav-link"
-                            activeStyle={stil}
+                            activeClassName="active"
                         >
                             About
                         </NavLink>
@@ -42,7 +40,7 @@ class Nav extends Component {
                         <NavLink
                             to="/contact"
                             className="nav-link"
-                            activeStyle={stil}
+                            activeClassName="active"
                         >
                             Contact
                         </NavLink>
@@ -51,7 +49,6 @@ class Nav extends Component {
             </div>
         );
     }
-    n;
 }
 
 export default Nav;
