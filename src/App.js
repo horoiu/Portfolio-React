@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Antet from "./antet";
 import Nav from "./Nav";
-import Proiecte from "./proiecte";
+import Projects from "./projects";
 import AddProject from "./addProject";
 import About from "./about";
 import Contact from "./contact";
@@ -26,7 +26,7 @@ class App extends Component {
                     </div>
                     <div className="col-9">
                         <Switch>
-                            <Route exact path="/" component={Proiecte} />
+                            <Route exact path="/" component={Projects} />
                             <Route path="/addProject" component={AddProject} />
                             <Route path="/about" component={About} />
                             <Route path="/contact" component={Contact} />

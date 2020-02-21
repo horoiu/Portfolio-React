@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { MDBBtn } from "mdbreact";
-import "./proiectCard.css";
+import "./projectCard.css";
 
-class ProiectCard extends Component {
+class ProjectCard extends Component {
     render() {
-        // console.log("proiectCard this.props", this.props);
+        // console.log("projectCard this.props", this.props);
         return (
             <>
-                <div className="proiectCard d-inline-block btn">
-                    <h5>{this.props.titlu}</h5>
-                    <p>{this.props.tehnologie}</p>
-                    <p>{this.props.descriere}</p>
+                <div className="projectCard d-inline-block btn">
+                    <h5>{this.props.title}</h5>
+                    <p>{this.props.tehnology}</p>
+                    <p>{this.props.description}</p>
                     <MDBBtn
                         color="indigo"
                         className="float-right"
@@ -25,4 +25,4 @@ class ProiectCard extends Component {
     }
 }
 
-export default ProiectCard;
+export default ProjectCard;

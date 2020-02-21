@@ -6,12 +6,12 @@ class AddProject extends Component {
         super(props);
         this.initialState = {
             id: 0,
-            titlu: "",
-            tehnologie: "",
-            descriere: ""
+            title: "",
+            tehnology: "",
+            description: ""
         };
 
-        //  Initializez obiectul "state"
+        //  Initialize "state" object
         this.state = this.initialState;
 
         //  Functii de tratare a evenimentelor "change" si "submit"
@@ -30,19 +30,21 @@ class AddProject extends Component {
     addProject(item) {
         console.log("Clicked Save Project button");
 
-        const proiecte = this.state;
-        var sirAct = proiecte;
-        sirAct.push({
-            id: sirAct.length ? sirAct[sirAct.length - 1].id + 1 : 1,
-            titlu: item.titlu,
-            technologie: item.technologie,
-            descriere: item.descriere
+        const projects = this.state;
+        let actualList = projects;
+        actualList.push({
+            id: actualList.length
+                ? actualList[actualList.length - 1].id + 1
+                : 1,
+            title: item.title,
+            technology: item.technology,
+            description: item.description
         });
-        console.log("sirAct", sirAct);
-        this.setState({ proiecte: sirAct });
+        console.log("actualList", actualList);
+        this.setState({ projectsList: actualList });
 
         this.addProject(this.state);
-        this.setState(this.initialState); // Golesc formularul
+        this.setState(this.initialState); // Empty the form
     }
 
     render() {
@@ -51,33 +53,33 @@ class AddProject extends Component {
                 <h2 className="text-center">Add a new Project</h2>
                 <form className="mx-3 grey-text">
                     <MDBInput
-                        name="titlu"
+                        name="title"
                         label="Title"
                         icon="edit"
                         hint="Project Name"
                         group
                         type="text"
-                        value={this.state.titlu}
+                        value={this.state.title}
                         onChange={this.handleChange}
                     />
                     <MDBInput
-                        name="loc"
+                        name="technology"
                         label="Technology"
                         icon="map"
                         hint="Programming Language or Framework"
                         group
                         type="text"
-                        value={this.state.loc}
+                        value={this.state.technology}
                         onChange={this.handleChange}
                     />
                     <MDBInput
-                        name="descriere"
+                        name="description"
                         label="Description"
                         icon="sticky-note"
                         hint="Say something"
                         group
                         type="textarea"
-                        value={this.state.descriere}
+                        value={this.state.description}
                         onChange={this.handleChange}
                     />
                     <div className="text-center">
