@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Antet from "./Antet.js";
+import Header from "./components/Header/Header.jsx";
 import Nav from "./components/Nav/Nav";
 import Projects from "./components/Projects/Projects";
 import AddProject from "./addProject";
 import About from "./components/About/About.jsx";
-// import About from "./components/About/About.jsx/index.js.js";
 import Contact from "./contact";
 import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
@@ -19,7 +18,7 @@ class App extends Component {
         // console.log("App this.state:", this.state);
         return (
             <div className="container">
-                <Antet />
+                <Header />
                 <div className="row mr-0 ml-0">
                     <div className="col style">
                         <Nav />
