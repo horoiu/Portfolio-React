@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Header from "./components/Header/Header.jsx";
-import Nav from "./components/Nav/Nav";
-import Projects from "./components/Projects/Projects";
-import AddProject from "./addProject";
-import About from "./components/About/About.jsx";
-import Contact from "./components/Contact/Contact";
-import NotFound from "./components/NotFound/NotFound";
-import Footer from "./components/Footer/Footer";
+import Header from "../Header/Header.jsx";
+import Nav from "../Nav/Nav";
+import Projects from "../Projects/Projects";
+import AddProject from "../../addProject";
+import About from "../About/About.jsx";
+import Contact from "../Contact/Contact";
+import NotFound from "../NotFound/NotFound";
+import Footer from "../Footer/Footer";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -27,8 +27,8 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Projects} />
                             <Route path="/addProject" component={AddProject} />
-                            <Route path="/about" component={About} />
-                            <Route path="/contact" component={Contact} />
+                            <Route path="/About" component={About} />
+                            <Route path="/Contact" component={Contact} />
                             <Route component={NotFound} />
                         </Switch>
                     </div>
