@@ -4,7 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Projects from "./components/Projects/Projects";
 import AddProject from "./addProject";
 import About from "./components/About/About.jsx";
-import Contact from "./contact";
+import Contact from "./components/Contact/Contact";
 import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import { Route, Switch } from "react-router-dom";
