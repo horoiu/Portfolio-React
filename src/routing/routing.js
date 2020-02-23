@@ -4,7 +4,7 @@ import Projects from "../components/Projects/Projects";
 import AddProject from "../pages/AddProject/addProject";
 import About from "../pages/About/About.jsx";
 import Contact from "../pages/Contact/Contact";
-import NotFound from "../pages/NotFound/NotFound";
+import notFound from "../pages/NotFound/notFound";
 
 class Routing extends Component {
     render() {
@@ -15,7 +15,7 @@ class Routing extends Component {
                     <Route path="/addProject" component={AddProject} />
                     <Route path="/About" component={About} />
                     <Route path="/Contact" component={Contact} />
-                    <Route component={NotFound} />
+                    <Route component={notFound} />
                 </Switch>
             </div>
         );
