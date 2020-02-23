@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import ProjectCard from "../ProjectCard/projectCard";
+import ProjectCard from "../ProjectCard/ProjectCard";
 import projectsList from "./projectsList.js"; //This is ok, but the file should be JS
+import {
+    readLocalStorage,
+    setLocalStorage
+} from "../../services/localStorage.js";
 
 // console.log("projects.js: ProjectsList = ", ProjectsList);
 class Projects extends Component {
@@ -64,15 +68,9 @@ class Projects extends Component {
         // parseInt can return NaN, parseInt('a'), would be safer to check and return here to avoid unexpected results from filter
 
         const { projectsList } = this.state;
-
-        // If it is a short one liner, we can use the shorthand syntax because its easier to read. It's a matter of preference anyway.
-        // e.g. const sirNou = proiecte.filter(item => item.id !== idProiect);
         const newList = projectsList.filter(item => item.id !== idProject);
-
         this.setState({ projectsList: newList });
-
-        // We should decouple by extracting this in a separate file (e.g. a service)
-        localStorage.setItem("projectsList", JSON.stringify(newList));
+        setLocalStorage("projectsList", newList);
     }
 
     //Working on LocalStorage

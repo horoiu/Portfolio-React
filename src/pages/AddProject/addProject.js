@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import { MDBBtn, MDBInput } from "mdbreact";
+import {
+    setLocalStorage,
+    readLocalStorage
+} from "../../services/localStorage.js";
 
+const initialState = {
+    id: 0,
+    title: "",
+    tehnology: "",
+    description: ""
+};
 class AddProject extends Component {
     constructor(props) {
         super(props);
 
         //Since this initialState is used as default and never changed, it could be extracted outside the class in a const.
-        this.initialState = {
-            id: 0,
-            title: "",
-            tehnology: "",
-            description: ""
-        };
+        this.initialState = initialState;
 
         //  Initialize "state" object
         this.state = this.initialState;
@@ -32,7 +37,11 @@ class AddProject extends Component {
     addProject(item) {
         console.log("Clicked Save Project button");
 
-        const projects = this.state;
+        const projects = readLocalStorage();
+        console.log("addProject: projects:", projects);
+
+        // const projects = this.state;
+        console.log("this.state:", this.state);
         let actualList = projects;
         actualList.push({
             id: actualList.length
@@ -43,10 +52,13 @@ class AddProject extends Component {
             description: item.description
         });
         console.log("actualList", actualList);
-        this.setState({ projectsList: actualList });
+        // this.setState({ projectsList: actualList });
 
-        this.addProject(this.state);
-        this.setState(this.initialState); // Empty the form
+        // localStorage
+        // setLocalStorage("projectsList", actualList);
+
+        //     this.addProject(this.state);
+        //     this.setState(this.initialState); // Empty the form
     }
 
     render() {
@@ -67,7 +79,7 @@ class AddProject extends Component {
                     <MDBInput
                         name="technology"
                         label="Technology"
-                        icon="map"
+                        icon="keyboard"
                         hint="Programming Language or Framework"
                         group
                         type="text"
