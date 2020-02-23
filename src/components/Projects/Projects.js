@@ -5,6 +5,7 @@ import {
     readLocalStorage,
     setLocalStorage
 } from "../../services/localStorage.js";
+import error from "../../pages/Error/error";
 
 // console.log("projects.js: ProjectsList = ", ProjectsList);
 class Projects extends Component {
@@ -67,10 +68,17 @@ class Projects extends Component {
         const idProject = parseInt(ev.target.id);
         // parseInt can return NaN, parseInt('a'), would be safer to check and return here to avoid unexpected results from filter
 
-        const { projectsList } = this.state;
-        const newList = projectsList.filter(item => item.id !== idProject);
-        this.setState({ projectsList: newList });
-        setLocalStorage("projectsList", newList);
+        // check if idProject is an integer or NaN
+        if (isNaN(idProject)) {
+            console.log("IF");
+            error("NaN error");
+        } else {
+            console.log("ELSE");
+            const { projectsList } = this.state;
+            const newList = projectsList.filter(item => item.id !== idProject);
+            this.setState({ projectsList: newList });
+            setLocalStorage("projectsList", newList);
+        }
     }
 
     //Working on LocalStorage

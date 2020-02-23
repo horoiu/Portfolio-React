@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// This can also be a functional component since we do not use state
-
-function notFound(props) {
-    // console.log("notFound(): ", props);
+function error(msg) {
+    // console.log("error(): ", msg);
     return (
         <div className="text-center">
-            <h2 className="mt-5">Page Not Found</h2>
+            <h2 className="mt-5">ERROR Page</h2>
             <br></br>
-            <h4>The page "{props.location.pathname}" does not exist!</h4>
+            <h4>There is an error: "{msg}" !</h4>
             <p>
                 Would you like to return to<Link to="/"> Project's</Link> page
                 instead?
@@ -18,4 +16,4 @@ function notFound(props) {
     );
 }
 
-export default notFound;
+export default error;
